@@ -2,7 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+
+body {
+  background-image: linear-gradient(to right, #44A0E6, #F7DC6F, #FFC107);
+}
+ /* body {
+  background-image: linear-gradient(to right, #FF69B4, #7A288A, #3498DB, #F7DC6F, #FFFFFF);
+} */
+
+/* :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -85,4 +94,4 @@
   body {
     @apply bg-background text-foreground;
   }
-}
+} */

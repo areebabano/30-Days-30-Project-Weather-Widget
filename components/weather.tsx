@@ -132,15 +132,15 @@ return (
     <Card className="w-full max-w-md mx-auto text-center">
       {/* Card header with title and description */}
       <CardHeader>
-        <CardTitle>Weather Widget</CardTitle>
+        <CardTitle><b><i>⛅☔ Weather Widget ⛅☔</i></b></CardTitle>
         <CardDescription>
-          Search for the current weather conditions in your city.
+          <i><u>Search for the current weather conditions in your city.</u></i>
         </CardDescription>
       </CardHeader>
       {/* Card content including the search form and weather display */}
       <CardContent>
         {/* Form to input and submit the location */}
-        <form onSubmit={handleSearch} className="flex items-center gap-2">
+        <form onSubmit={handleSearch} className="flex items-center gap-2 text-white">
           <Input
             type="text"
             placeholder="Enter a city name"
@@ -166,18 +166,18 @@ return (
           <div className="mt-4 grid gap-2">
             {/* Display temperature message with icon */}
             <div className="flex items-center gap-2">
-            <FaThermometerHalf className="w-6 h-6" />
-              {getTemperatureMessage(weather.temprature, weather.unit)}
+            <FaThermometerHalf className="w-6 h-6 text-red-600" />
+              <div className="text-white">{getTemperatureMessage(weather.temprature, weather.unit)}</div>
             </div>
             
             <div className="flex items-center gap-2">
-              <LuCloudy className="w-6 h-6" />
-              <div>{getWeatherMessage(weather.description)}</div>
+              <LuCloudy className="w-6 h-6 text-blue-300" />
+              <div className="text-white">{getWeatherMessage(weather.description)}</div>
             </div>
             
             <div className="flex items-center gap-2">
-            <FiMapPin className="w-6 h-6" />
-              <div>{getLocationMessage(weather.location)}</div>
+            <FiMapPin className="w-6 h-6 text-yellow-200" />
+              <div className="text-white">{getLocationMessage(weather.location)}</div>
             </div>
           </div>
         )}
