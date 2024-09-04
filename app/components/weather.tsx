@@ -51,6 +51,7 @@ const handleSearch = async (e: FormEvent<HTMLFormElement>) => {
     const response = await fetch(
       `https://api.weatherapi.com/v1/current.json?key=${process.env.NEXT_PUBLIC_WEATHER_API_KEY}&q=${trimmedLocation}`
     );
+    console.log(response)
     if (!response.ok) {
       throw new Error("City not found");
     }
